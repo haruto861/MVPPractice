@@ -9,12 +9,19 @@ import UIKit
 
 class CheckListTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    static var className: String {
+        return String(describing: self)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    static var identifier: String {
+        return className
+    }
 
+    static var nibName: String {
+        return className
+    }
+
+    static func nib() -> UINib {
+        return UINib(nibName: nibName, bundle: nil)
     }
 }

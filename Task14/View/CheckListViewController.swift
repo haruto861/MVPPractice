@@ -7,9 +7,27 @@
 
 import UIKit
 
-class CheckListViewController: UIViewController {
+final class CheckListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet private weak var checkListTableView: UITableView! {
+        didSet {
+            checkListTableView.delegate = self
+            checkListTableView.dataSource = self
+            checkListTableView.register(CheckListTableViewCell.nib(), forCellReuseIdentifier: CheckListTableViewCell.identifier)
+        }
+    }
+}
+
+extension CheckListViewController: UITableViewDelegate {
+}
+
+extension CheckListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = checkListTableView.dequeueReusableCell(withIdentifier: CheckListTableViewCell.identifier, for: indexPath)
+        return cell
     }
 }
