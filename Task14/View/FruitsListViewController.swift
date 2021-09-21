@@ -9,6 +9,8 @@ import UIKit
 
 final class FruitsListViewController: UIViewController {
 
+    private var fruitsList = FruitsList()
+
     @IBOutlet private weak var checkListTableView: UITableView! {
         didSet {
             checkListTableView.delegate = self
@@ -23,11 +25,12 @@ extension FruitsListViewController: UITableViewDelegate {
 
 extension FruitsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return fruitsList.useCase.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = checkListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath)
+        let cell = checkListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath) as! FruitsListTableViewCell
+        cell.configure(fruits: fruitsList.useCase[indexPath.row])
         return cell
     }
 }
