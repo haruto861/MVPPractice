@@ -9,6 +9,9 @@ import UIKit
 
 class FruitsListTableViewCell: UITableViewCell {
 
+    @IBOutlet private weak var checkImage: UIImageView!
+    @IBOutlet private weak var fruitsNameLabel: UILabel!
+
     static var className: String {
         return String(describing: self)
     }
@@ -23,5 +26,9 @@ class FruitsListTableViewCell: UITableViewCell {
 
     static func nib() -> UINib {
         return UINib(nibName: nibName, bundle: nil)
+    }
+
+    func configure(fruitsName: String, checkImageUrl: String) {
+        
     }
 }
