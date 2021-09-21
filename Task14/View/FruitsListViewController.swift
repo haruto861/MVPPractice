@@ -7,27 +7,27 @@
 
 import UIKit
 
-final class CheckListViewController: UIViewController {
+final class FruitsListViewController: UIViewController {
 
     @IBOutlet private weak var checkListTableView: UITableView! {
         didSet {
             checkListTableView.delegate = self
             checkListTableView.dataSource = self
-            checkListTableView.register(CheckListTableViewCell.nib(), forCellReuseIdentifier: CheckListTableViewCell.identifier)
+            checkListTableView.register(FruitsListTableViewCell.nib(), forCellReuseIdentifier: FruitsListTableViewCell.identifier)
         }
     }
 }
 
-extension CheckListViewController: UITableViewDelegate {
+extension FruitsListViewController: UITableViewDelegate {
 }
 
-extension CheckListViewController: UITableViewDataSource {
+extension FruitsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = checkListTableView.dequeueReusableCell(withIdentifier: CheckListTableViewCell.identifier, for: indexPath)
+        let cell = checkListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath)
         return cell
     }
 }

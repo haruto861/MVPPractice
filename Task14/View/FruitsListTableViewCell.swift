@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CheckListTableViewCell: UITableViewCell {
+class FruitsListTableViewCell: UITableViewCell {
 
     static var className: String {
         return String(describing: self)

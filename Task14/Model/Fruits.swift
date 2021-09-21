@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Fruits {
+    var fruit: String
+    var isChecked: Bool
+}
