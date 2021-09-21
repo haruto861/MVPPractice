@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F1A9DC7F26F9AE87000DE535 /* FruitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */; };
 		F1A9DC8126F9AFA9000DE535 /* FruitsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC8026F9AFA9000DE535 /* FruitsListPresenter.swift */; };
+		F1A9DC8426FA46B2000DE535 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC8326FA46B2000DE535 /* Router.swift */; };
+		F1A9DC8726FA4882000DE535 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC8626FA4882000DE535 /* Storyboard+.swift */; };
 		F1AA5D2326F75A31000B0BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */; };
 		F1AA5D2526F75A31000B0BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */; };
 		F1AA5D2C26F75A32000B0BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AA5D2B26F75A32000B0BA0 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsList.swift; sourceTree = "<group>"; };
 		F1A9DC8026F9AFA9000DE535 /* FruitsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListPresenter.swift; sourceTree = "<group>"; };
+		F1A9DC8326FA46B2000DE535 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F1A9DC8626FA4882000DE535 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		F1AA5D1F26F75A31000B0BA0 /* Task14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1A9DC8226FA4660000DE535 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9DC8326FA46B2000DE535 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F1A9DC8526FA4844000DE535 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9DC8626FA4882000DE535 /* Storyboard+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F1AA5D1626F75A31000B0BA0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +84,15 @@
 		F1AA5D2126F75A31000B0BA0 /* Task14 */ = {
 			isa = PBXGroup;
 			children = (
-				F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */,
-				F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */,
+				F1A9DC8526FA4844000DE535 /* Extension */,
+				F1A9DC8226FA4660000DE535 /* Router */,
 				F1AA5D4526F7626B000B0BA0 /* Presenter */,
 				F1AA5D4426F76265000B0BA0 /* View */,
 				F1AA5D4226F76252000B0BA0 /* Model */,
 				F1AA5D2B26F75A32000B0BA0 /* Assets.xcassets */,
 				F1AA5D3026F75A32000B0BA0 /* Info.plist */,
+				F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */,
+				F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */,
 			);
 			path = Task14;
 			sourceTree = "<group>";
@@ -173,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A9DC8426FA46B2000DE535 /* Router.swift in Sources */,
 				F1A9DC7F26F9AE87000DE535 /* FruitsList.swift in Sources */,
+				F1A9DC8726FA4882000DE535 /* Storyboard+.swift in Sources */,
 				F1AA5D3B26F7613D000B0BA0 /* FruitsListTableViewCell.swift in Sources */,
 				F1AA5D4B26F76352000B0BA0 /* Fruits.swift in Sources */,
 				F1A9DC8126F9AFA9000DE535 /* FruitsListPresenter.swift in Sources */,
