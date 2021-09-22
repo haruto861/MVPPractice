@@ -53,26 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F14E83DE26FACED80004466E /* FruitsList */ = {
-			isa = PBXGroup;
-			children = (
-				F1AA5D3626F760F5000B0BA0 /* FruitsListViewController.swift */,
-				F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */,
-				F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */,
-				F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */,
-			);
-			path = FruitsList;
-			sourceTree = "<group>";
-		};
-		F14E83E026FACEF50004466E /* AddFruits */ = {
-			isa = PBXGroup;
-			children = (
-				F14E83E126FACF240004466E /* AddFruitsViewController.swift */,
-				F14E83E326FACF450004466E /* AddFruits.storyboard */,
-			);
-			path = AddFruits;
-			sourceTree = "<group>";
-		};
 		F1A9DC8226FA4660000DE535 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,35 +88,11 @@
 		F1AA5D2126F75A31000B0BA0 /* Task14 */ = {
 			isa = PBXGroup;
 			children = (
-				F1A9DC8526FA4844000DE535 /* Extension */,
-				F1A9DC8226FA4660000DE535 /* Router */,
-				F1AA5D4526F7626B000B0BA0 /* Presenter */,
-				F1AA5D4426F76265000B0BA0 /* View */,
-				F1AA5D4226F76252000B0BA0 /* Model */,
-				F1AA5D2B26F75A32000B0BA0 /* Assets.xcassets */,
+				F1E0D86126FB1042004A60A0 /* Classes */,
+				F1E0D86826FB1155004A60A0 /* Resources */,
 				F1AA5D3026F75A32000B0BA0 /* Info.plist */,
-				F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */,
-				F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */,
 			);
 			path = Task14;
-			sourceTree = "<group>";
-		};
-		F1AA5D4226F76252000B0BA0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F1AA5D4A26F76352000B0BA0 /* Fruits.swift */,
-				F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F1AA5D4426F76265000B0BA0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F14E83E026FACEF50004466E /* AddFruits */,
-				F14E83DE26FACED80004466E /* FruitsList */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F1AA5D4526F7626B000B0BA0 /* Presenter */ = {
@@ -145,6 +101,82 @@
 				F1A9DC8026F9AFA9000DE535 /* FruitsListPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F1E0D86126FB1042004A60A0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F1E0D86226FB1051004A60A0 /* Modules */,
+				F1E0D86326FB105D004A60A0 /* Commons */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F1E0D86226FB1051004A60A0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA5D2226F75A31000B0BA0 /* AppDelegate.swift */,
+				F1AA5D2426F75A31000B0BA0 /* SceneDelegate.swift */,
+				F1E0D86526FB10AD004A60A0 /* FruitsList */,
+				F1E0D86426FB10A3004A60A0 /* AddFruits */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F1E0D86326FB105D004A60A0 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9DC8226FA4660000DE535 /* Router */,
+				F1A9DC8526FA4844000DE535 /* Extension */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		F1E0D86426FB10A3004A60A0 /* AddFruits */ = {
+			isa = PBXGroup;
+			children = (
+				F14E83E126FACF240004466E /* AddFruitsViewController.swift */,
+				F14E83E326FACF450004466E /* AddFruits.storyboard */,
+			);
+			path = AddFruits;
+			sourceTree = "<group>";
+		};
+		F1E0D86526FB10AD004A60A0 /* FruitsList */ = {
+			isa = PBXGroup;
+			children = (
+				F1E0D86726FB10D7004A60A0 /* Model */,
+				F1E0D86626FB10D1004A60A0 /* View */,
+				F1AA5D4526F7626B000B0BA0 /* Presenter */,
+			);
+			path = FruitsList;
+			sourceTree = "<group>";
+		};
+		F1E0D86626FB10D1004A60A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA5D3626F760F5000B0BA0 /* FruitsListViewController.swift */,
+				F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */,
+				F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */,
+				F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1E0D86726FB10D7004A60A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA5D4A26F76352000B0BA0 /* Fruits.swift */,
+				F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1E0D86826FB1155004A60A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA5D2B26F75A32000B0BA0 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
