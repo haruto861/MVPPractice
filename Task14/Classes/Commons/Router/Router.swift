@@ -16,6 +16,8 @@ class Router {
 
     func showRoot(window: UIWindow) {
         let vc  = UIStoryboard.fruitsListViewContrtoller
+        let presenter = FruitsListPresenter(output: vc)
+        vc.inject(presenter: presenter)
         let nav  = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
         window.makeKeyAndVisible()
