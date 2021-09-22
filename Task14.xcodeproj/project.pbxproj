@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F14E83E226FACF240004466E /* AddFruitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E83E126FACF240004466E /* AddFruitsViewController.swift */; };
+		F14E83E426FACF450004466E /* AddFruits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14E83E326FACF450004466E /* AddFruits.storyboard */; };
 		F1A9DC7F26F9AE87000DE535 /* FruitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */; };
 		F1A9DC8126F9AFA9000DE535 /* FruitsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC8026F9AFA9000DE535 /* FruitsListPresenter.swift */; };
 		F1A9DC8426FA46B2000DE535 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A9DC8326FA46B2000DE535 /* Router.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F14E83E126FACF240004466E /* AddFruitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFruitsViewController.swift; sourceTree = "<group>"; };
+		F14E83E326FACF450004466E /* AddFruits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFruits.storyboard; sourceTree = "<group>"; };
 		F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsList.swift; sourceTree = "<group>"; };
 		F1A9DC8026F9AFA9000DE535 /* FruitsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListPresenter.swift; sourceTree = "<group>"; };
 		F1A9DC8326FA46B2000DE535 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -49,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F14E83DE26FACED80004466E /* FruitsList */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA5D3626F760F5000B0BA0 /* FruitsListViewController.swift */,
+				F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */,
+				F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */,
+				F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */,
+			);
+			path = FruitsList;
+			sourceTree = "<group>";
+		};
+		F14E83E026FACEF50004466E /* AddFruits */ = {
+			isa = PBXGroup;
+			children = (
+				F14E83E126FACF240004466E /* AddFruitsViewController.swift */,
+				F14E83E326FACF450004466E /* AddFruits.storyboard */,
+			);
+			path = AddFruits;
+			sourceTree = "<group>";
+		};
 		F1A9DC8226FA4660000DE535 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +133,8 @@
 		F1AA5D4426F76265000B0BA0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F1AA5D3626F760F5000B0BA0 /* FruitsListViewController.swift */,
-				F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */,
-				F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */,
-				F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */,
+				F14E83E026FACEF50004466E /* AddFruits */,
+				F14E83DE26FACED80004466E /* FruitsList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1AA5D3C26F7613D000B0BA0 /* FruitsListTableViewCell.xib in Resources */,
+				F14E83E426FACF450004466E /* AddFruits.storyboard in Resources */,
 				F1AA5D2C26F75A32000B0BA0 /* Assets.xcassets in Resources */,
 				F1AA5D4126F761DE000B0BA0 /* FruitsList.storyboard in Resources */,
 			);
@@ -200,6 +223,7 @@
 				F1A9DC8726FA4882000DE535 /* Storyboard+.swift in Sources */,
 				F1AA5D3B26F7613D000B0BA0 /* FruitsListTableViewCell.swift in Sources */,
 				F1AA5D4B26F76352000B0BA0 /* Fruits.swift in Sources */,
+				F14E83E226FACF240004466E /* AddFruitsViewController.swift in Sources */,
 				F1A9DC8126F9AFA9000DE535 /* FruitsListPresenter.swift in Sources */,
 				F1AA5D3726F760F5000B0BA0 /* FruitsListViewController.swift in Sources */,
 				F1AA5D2326F75A31000B0BA0 /* AppDelegate.swift in Sources */,

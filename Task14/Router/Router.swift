@@ -9,11 +9,26 @@ import Foundation
 import UIKit
 
 class Router {
+    
     static var shared: Router = .init()
     private init() {}
-
     private var window: UIWindow?
 
     func showRoot(window: UIWindow) {
+        let vc  = UIStoryboard.fruitsListViewContrtoller
+        let nav  = UINavigationController(rootViewController: vc)
+        window.rootViewController = nav
+        window.makeKeyAndVisible()
+        self.window = window
+    }
+
+    func toAddFrutitsVC(from: UIViewController) {
+        let vc  = UIStoryboard.addFruitsViewController
+        let nav  = UINavigationController(rootViewController: vc)
+        transit(from: from, next: nav)
+    }
+
+    func transit(from: UIViewController, next: UIViewController, animted: Bool = true) {
+            from.present(next, animated: true, completion: nil)
     }
 }

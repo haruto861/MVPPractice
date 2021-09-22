@@ -11,12 +11,26 @@ final class FruitsListViewController: UIViewController {
 
     private var fruitsList = FruitsList()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        prepareNabBarItem()
+    }
+
     @IBOutlet private weak var checkListTableView: UITableView! {
         didSet {
             checkListTableView.delegate = self
             checkListTableView.dataSource = self
             checkListTableView.register(FruitsListTableViewCell.nib(), forCellReuseIdentifier: FruitsListTableViewCell.identifier)
         }
+    }
+
+    private func prepareNabBarItem() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(transit))
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+
+    @objc private func transit() {
+        Router.shared.toAddFrutitsVC(from: self)
     }
 }
 
