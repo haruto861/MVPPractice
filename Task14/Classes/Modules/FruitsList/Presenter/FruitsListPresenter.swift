@@ -31,12 +31,8 @@ extension FruitsListPresenter: FruitsListPresenerInput {
     func append(fruit: String) {
         fruitsList.useCase.append(Fruits(fruit: fruit, isChecked: false))
     }
-
     var heightForRow: Int { 70 }
-
     var numberOfRows: Int { fruitsList.useCase.count }
-
     func fruit(index: Int) -> Fruits { fruitsList.useCase[index] }
-
     func transit() { output.transit() }
 }
