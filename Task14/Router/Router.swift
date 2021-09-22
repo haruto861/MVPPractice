@@ -24,6 +24,7 @@ class Router {
 
     func toAddFrutitsVC(from: UIViewController) {
         let vc  = UIStoryboard.addFruitsViewController
+        vc.addFruitsDelegate = from as? AddFruitsDelegate
         let nav  = UINavigationController(rootViewController: vc)
         transit(from: from, next: nav)
     }

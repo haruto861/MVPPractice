@@ -32,7 +32,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="checkListTableView" destination="Kp7-jW-IFR" id="4La-ag-Ich"/>
+                        <outlet property="fruitsListTableView" destination="Kp7-jW-IFR" id="4La-ag-Ich"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

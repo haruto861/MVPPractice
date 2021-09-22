@@ -30,6 +30,6 @@ final class FruitsListTableViewCell: UITableViewCell {
 
     func configure(fruits: Fruits) {
         fruitsNameLabel.text = fruits.fruit
-        checkImage.image = fruits.isChecked ?  UIImage(named: "") : nil
+        checkImage.image = fruits.isChecked ?  UIImage(named: "check-mark") : nil
     }
 }

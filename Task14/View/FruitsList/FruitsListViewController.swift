@@ -9,18 +9,18 @@ import UIKit
 
 final class FruitsListViewController: UIViewController {
 
-    private var fruitsList = FruitsList()
+    private var fruitsList = FruitsList() 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNabBarItem()
     }
 
-    @IBOutlet private weak var checkListTableView: UITableView! {
+    @IBOutlet private weak var fruitsListTableView: UITableView! {
         didSet {
-            checkListTableView.delegate = self
-            checkListTableView.dataSource = self
-            checkListTableView.register(FruitsListTableViewCell.nib(), forCellReuseIdentifier: FruitsListTableViewCell.identifier)
+            fruitsListTableView.delegate = self
+            fruitsListTableView.dataSource = self
+            fruitsListTableView.register(FruitsListTableViewCell.nib(), forCellReuseIdentifier: FruitsListTableViewCell.identifier)
         }
     }
 
@@ -35,6 +35,9 @@ final class FruitsListViewController: UIViewController {
 }
 
 extension FruitsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 }
 
 extension FruitsListViewController: UITableViewDataSource {
@@ -43,8 +46,15 @@ extension FruitsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = checkListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath) as! FruitsListTableViewCell
+        let cell = fruitsListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath) as! FruitsListTableViewCell
         cell.configure(fruits: fruitsList.useCase[indexPath.row])
         return cell
+    }
+}
+
+extension FruitsListViewController: AddFruitsDelegate {
+    func add(fruit: String) {
+        fruitsList.useCase.append(Fruits(fruit: fruit, isChecked: false))
+        self.fruitsListTableView.reloadData()
     }
 }
