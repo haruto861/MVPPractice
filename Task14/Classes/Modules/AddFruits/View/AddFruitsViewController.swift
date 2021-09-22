@@ -13,8 +13,11 @@ protocol AddFruitsDelegate: AnyObject {
 
 final class AddFruitsViewController: UIViewController {
 
-    private var fruitsList = FruitsList()
     weak var addFruitsDelegate: AddFruitsDelegate?
+    private var presenter: AddFruitsPresenterInput!
+    func inject(presenter: AddFruitsPresenterInput) {
+        self.presenter = presenter
+    }
 
     @IBOutlet private weak var addNametextField: UITextField!
 
@@ -31,13 +34,24 @@ final class AddFruitsViewController: UIViewController {
     }
 
     @objc private func save() {
-        if let name = addNametextField.text {
-            addFruitsDelegate?.add(fruit: name)
-            self.dismiss(animated: true, completion: nil)
-        }
+        presenter.textFieldInput(text: addNametextField.text)
     }
 
     @objc private func cancel() {
-        self.dismiss(animated: true, completion: nil)
+        presenter.cancelButton()
+    }
+}
+
+extension AddFruitsViewController: AddFruitsPresenterOutput {
+    func addFruit(fruit: String) {
+        addFruitsDelegate?.add(fruit: fruit)
+    }
+
+    func saveButton(isTap: Bool) {
+        self.dismiss(animated: isTap, completion: nil)
+    }
+
+    func cancelButton(isTap: Bool) {
+        self.dismiss(animated: isTap, completion: nil)
     }
 }
