@@ -28,8 +28,8 @@ final class FruitsListTableViewCell: UITableViewCell {
         return UINib(nibName: nibName, bundle: nil)
     }
 
-    func configure(fruits: Fruits) {
-        fruitsNameLabel.text = fruits.fruit
-        checkImage.image = fruits.isChecked ?  UIImage(named: "check-mark") : nil
+    func configure(fruit: Fruit) {
+        fruitsNameLabel.text = fruit.name
+        checkImage.image = fruit.isChecked ?  UIImage(named: "check-mark") : nil
     }
 }
