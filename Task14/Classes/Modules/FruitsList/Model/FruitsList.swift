@@ -8,10 +8,10 @@
 import Foundation
 
 struct FruitsList {
-    var useCase: [Fruits] =  [
-        Fruits(fruit: "りんご", isChecked: false),
-        Fruits(fruit: "みかん", isChecked: true),
-        Fruits(fruit: "バナナ", isChecked: false),
-        Fruits(fruit: "パイナップル", isChecked: true)
+    var fruits: [Fruit] =  [
+        Fruit(name: "りんご", isChecked: false),
+        Fruit(name: "みかん", isChecked: true),
+        Fruit(name: "バナナ", isChecked: false),
+        Fruit(name: "パイナップル", isChecked: true)
     ]
 }

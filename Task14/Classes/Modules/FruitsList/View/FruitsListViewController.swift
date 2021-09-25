@@ -16,18 +16,21 @@ final class FruitsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareNabBarItem()
+        prepareNavBarItem()
     }
 
     @IBOutlet private weak var fruitsListTableView: UITableView! {
         didSet {
             fruitsListTableView.delegate = self
             fruitsListTableView.dataSource = self
-            fruitsListTableView.register(FruitsListTableViewCell.nib(), forCellReuseIdentifier: FruitsListTableViewCell.identifier)
+            fruitsListTableView.register(
+                FruitsListTableViewCell.nib(),
+                forCellReuseIdentifier: FruitsListTableViewCell.identifier
+            )
         }
     }
 
-    private func prepareNabBarItem() {
+    private func prepareNavBarItem() {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(transitToNextVC))
         self.navigationItem.rightBarButtonItem = addButton
     }
@@ -49,8 +52,12 @@ extension FruitsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = fruitsListTableView.dequeueReusableCell(withIdentifier: FruitsListTableViewCell.identifier, for: indexPath) as! FruitsListTableViewCell
-        cell.configure(fruits: presenter.fruit(index: indexPath.row))
+        let cell = fruitsListTableView.dequeueReusableCell(
+            withIdentifier: FruitsListTableViewCell.identifier,
+            for: indexPath
+        ) as! FruitsListTableViewCell // swiftlint:disable:this force_cast
+
+        cell.configure(fruit: presenter.fruit(index: indexPath.row))
         return cell
     }
 }

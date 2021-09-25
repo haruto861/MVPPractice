@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Fruits {
-    var fruit: String
+struct Fruit {
+    var name: String
     var isChecked: Bool
 }

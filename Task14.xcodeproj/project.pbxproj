@@ -20,7 +20,7 @@
 		F1AA5D3B26F7613D000B0BA0 /* FruitsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */; };
 		F1AA5D3C26F7613D000B0BA0 /* FruitsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */; };
 		F1AA5D4126F761DE000B0BA0 /* FruitsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */; };
-		F1AA5D4B26F76352000B0BA0 /* Fruits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA5D4A26F76352000B0BA0 /* Fruits.swift */; };
+		F1AA5D4B26F76352000B0BA0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA5D4A26F76352000B0BA0 /* Fruit.swift */; };
 		F1E0D86C26FB1BA2004A60A0 /* AddFruitsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0D86B26FB1BA2004A60A0 /* AddFruitsPresenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		F1AA5D3926F7613D000B0BA0 /* FruitsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListTableViewCell.swift; sourceTree = "<group>"; };
 		F1AA5D3A26F7613D000B0BA0 /* FruitsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitsListTableViewCell.xib; sourceTree = "<group>"; };
 		F1AA5D4026F761DE000B0BA0 /* FruitsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitsList.storyboard; sourceTree = "<group>"; };
-		F1AA5D4A26F76352000B0BA0 /* Fruits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruits.swift; sourceTree = "<group>"; };
+		F1AA5D4A26F76352000B0BA0 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		F1E0D86B26FB1BA2004A60A0 /* AddFruitsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFruitsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +167,7 @@
 		F1E0D86726FB10D7004A60A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F1AA5D4A26F76352000B0BA0 /* Fruits.swift */,
+				F1AA5D4A26F76352000B0BA0 /* Fruit.swift */,
 				F1A9DC7E26F9AE87000DE535 /* FruitsList.swift */,
 			);
 			path = Model;
@@ -208,6 +208,7 @@
 				F1AA5D1B26F75A31000B0BA0 /* Sources */,
 				F1AA5D1C26F75A31000B0BA0 /* Frameworks */,
 				F1AA5D1D26F75A31000B0BA0 /* Resources */,
+				E547CE1926FCAB5E00065BC6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E547CE1926FCAB5E00065BC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1AA5D1B26F75A31000B0BA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,7 +294,7 @@
 				F1A9DC7F26F9AE87000DE535 /* FruitsList.swift in Sources */,
 				F1A9DC8726FA4882000DE535 /* Storyboard+.swift in Sources */,
 				F1AA5D3B26F7613D000B0BA0 /* FruitsListTableViewCell.swift in Sources */,
-				F1AA5D4B26F76352000B0BA0 /* Fruits.swift in Sources */,
+				F1AA5D4B26F76352000B0BA0 /* Fruit.swift in Sources */,
 				F1E0D86C26FB1BA2004A60A0 /* AddFruitsPresenter.swift in Sources */,
 				F14E83E226FACF240004466E /* AddFruitsViewController.swift in Sources */,
 				F1A9DC8126F9AFA9000DE535 /* FruitsListPresenter.swift in Sources */,

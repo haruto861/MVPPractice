@@ -9,14 +9,13 @@ import Foundation
 
 // 入力
 protocol AddFruitsPresenterInput {
-    func textFieldInput(text: String?)
+    func saveButton(name: String?)
     func cancelButton()
 }
 // 出力
 protocol AddFruitsPresenterOutput {
-    func cancelButton(isTap: Bool)
-    func saveButton(isTap: Bool)
     func addFruit(fruit: String)
+    func dismiss()
 }
 
 class AddFruitsPresenter {
@@ -28,13 +27,13 @@ class AddFruitsPresenter {
 
 extension AddFruitsPresenter: AddFruitsPresenterInput {
     func cancelButton() {
-        output.cancelButton(isTap: true)
+        output.dismiss()
     }
 
-    func textFieldInput(text: String?) {
-        if let fruitName = text {
-            output.addFruit(fruit: fruitName)
-            output.saveButton(isTap: true)
+    func saveButton(name: String?) {
+        if let name = name {
+            output.addFruit(fruit: name)
+            output.dismiss()
         }
     }
 }

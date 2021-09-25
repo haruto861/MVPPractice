@@ -19,14 +19,14 @@ final class AddFruitsViewController: UIViewController {
         self.presenter = presenter
     }
 
-    @IBOutlet private weak var addNametextField: UITextField!
+    @IBOutlet private weak var addNameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareNabBarItem()
+        prepareNavBarItem()
     }
 
-    private func prepareNabBarItem() {
+    private func prepareNavBarItem() {
         let saveButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(save))
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         self.navigationItem.rightBarButtonItem = saveButton
@@ -34,7 +34,7 @@ final class AddFruitsViewController: UIViewController {
     }
 
     @objc private func save() {
-        presenter.textFieldInput(text: addNametextField.text)
+        presenter.saveButton(name: addNameTextField.text)
     }
 
     @objc private func cancel() {
@@ -47,11 +47,7 @@ extension AddFruitsViewController: AddFruitsPresenterOutput {
         addFruitsDelegate?.add(fruit: fruit)
     }
 
-    func saveButton(isTap: Bool) {
-        self.dismiss(animated: isTap, completion: nil)
-    }
-
-    func cancelButton(isTap: Bool) {
-        self.dismiss(animated: isTap, completion: nil)
+    func dismiss() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
